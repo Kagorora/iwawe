@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@babel/core": "^7.11.6",
     "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
     "@babel/register": "^7.11.5",
     "babel-eslint": "^10.1.0",
     "bcrypt": "^5.0.0",
@@ -15,26 +17,21 @@
     "path": "^0.12.7",
     "pg": "^8.3.3",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.11.6",
-    "@babel/core": "^7.11.6",
-    "@babel/node": "^7.10.5",
-    "@babel/polyfill": "^7.11.5",
-    "@babel/preset-env": "^7.11.5",
     "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
     "prettier": "^2.1.2",
     "prettier-eslint": "^11.0.0",
-    "prettier-eslint-cli": "^5.0.0",
-    "sequelize-cli": "^6.2.0"
+    "prettier-eslint-cli": "^5.0.0"
   },
   "scripts": {
     "lint-overwrite": "npx prettier --write .",
     "lint-show": "prettier --check .",
-    "dev-start": "babel-node  ./src/index.js",
+    "start": "nodemon server.js",
     "format": "prettier-eslint --eslint-config-path ./.eslintrc.js --write '**/*.js'",
     "lint": "eslint . --ext .js"
   },
